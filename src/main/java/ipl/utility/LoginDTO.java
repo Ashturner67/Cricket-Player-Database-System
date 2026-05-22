@@ -1,0 +1,35 @@
+package ipl.utility;
+
+import java.io.Serializable;
+
+public class LoginDTO implements Serializable {
+
+    private String userName;
+    private String password;
+    private boolean status;
+
+    public LoginDTO(String userName, String password) {
+        this.userName = userName;
+        this.password = HashUtil.getSHA256Hash(password);
+        this.status = false;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = HashUtil.getSHA256Hash(password);
+    }
+    public boolean isStatus() {
+        return status;
+    }
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+}

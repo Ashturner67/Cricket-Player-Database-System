@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="653.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipl.client.HomePageController">
+   <children>
+      <Label fx:id="name" alignment="CENTER" layoutX="250.0" layoutY="27.0" prefHeight="56.0" prefWidth="461.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="Logout_Button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="113.0" text="Logout" />
+      <TableView fx:id="PlayerList_TableView" layoutY="386.0" prefHeight="320.0" prefWidth="936.0">
+         <columns>
+            <TableColumn fx:id="Name_Col" prefWidth="124.0" text="Name" />
+            <TableColumn fx:id="Club_Col" prefWidth="192.0" text="Club" />
+            <TableColumn fx:id="Country_Col" prefWidth="119.0" text="Country" />
+            <TableColumn fx:id="Position_Col" prefWidth="105.0" text="Position" />
+            <TableColumn fx:id="Age_Col" prefWidth="77.0" text="Age" />
+            <TableColumn fx:id="Height_Col" minWidth="0.0" prefWidth="100.0" text="Height" />
+            <TableColumn fx:id="Jersey_Col" prefWidth="99.0" text="Jersey Number" />
+            <TableColumn fx:id="Salary_Col" prefWidth="120.0" text="Weekly Salary" />
+         </columns>
+      </TableView>
+      <TextField fx:id="InputField1" layoutX="41.0" layoutY="238.0" prefHeight="25.0" prefWidth="283.0" />
+      <TextField fx:id="InputField2" layoutX="41.0" layoutY="282.0" prefHeight="25.0" prefWidth="283.0" />
+      <ComboBox fx:id="PlayerSearch_ComboBox" layoutX="41.0" layoutY="152.0" onAction="#ComboBox_Action" prefHeight="44.0" prefWidth="150.0" />
+      <Button fx:id="Search_Button" layoutX="231.0" layoutY="152.0" mnemonicParsing="false" onAction="#Search_Util" prefHeight="44.0" prefWidth="93.0" text="Search" />
+      <Text layoutX="70.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Options" textAlignment="CENTER" wrappingWidth="93.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="SearchBox_Text" layoutX="41.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="283.0" />
+      <ListView fx:id="CPWC_ListView" layoutY="386.0" prefHeight="267.0" prefWidth="936.0" visible="false" />
+      <Label fx:id="Query_Label" layoutX="14.0" layoutY="359.0" prefHeight="17.0" prefWidth="283.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="CountryWisePlayerCount_Button" alignment="CENTER" layoutX="768.0" layoutY="295.0" mnemonicParsing="false" onAction="#CWPC_Util" prefHeight="44.0" prefWidth="91.0" text="Country-wise Player Count" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="ShowAllPlayers_Button" alignment="CENTER" layoutX="480.0" layoutY="295.0" mnemonicParsing="false" onAction="#showAllPlayers" prefHeight="44.0" prefWidth="91.0" text="Show All Players" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="TotalSalary_Button" alignment="CENTER" layoutX="620.0" layoutY="295.0" mnemonicParsing="false" onAction="#showTotalSalary" prefHeight="44.0" prefWidth="91.0" text="Total Yearly Salary" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="480.0" layoutY="216.0" mnemonicParsing="false" onAction="#sellAction" prefHeight="44.0" prefWidth="91.0" text="List Selected Player to Sell" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="addPlayerButton" layoutX="620.0" layoutY="216.0" mnemonicParsing="false" onAction="#addPlayerAction" prefHeight="44.0" prefWidth="91.0" text="Add Player" />
+      <Button layoutX="768.0" layoutY="216.0" mnemonicParsing="false" onAction="#transferMarketOpen" prefHeight="44.0" prefWidth="91.0" text="Transfer Market" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="803.0" layoutY="15.0" mnemonicParsing="false" onAction="#showChangePass" prefHeight="25.0" prefWidth="113.0" text="Change Password" textAlignment="CENTER" />
+      <Text fx:id="SelectedPlayer_Text" layoutX="480.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="379.0">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="SellMessage_Text" layoutX="480.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="379.0">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="Position_ComboBox" layoutX="42.0" layoutY="238.0" prefHeight="25.0" prefWidth="283.0" />
+   </children>
+</AnchorPane>
